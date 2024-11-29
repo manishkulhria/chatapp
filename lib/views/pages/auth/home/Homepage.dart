@@ -3,6 +3,7 @@ import 'package:chat_app/controller/authcontroller.dart';
 import 'package:chat_app/model/authmodel.dart';
 import 'package:chat_app/services/database.dart';
 import 'package:chat_app/views/components/Textfield/Textfield.dart';
+import 'package:chat_app/views/pages/chat/chatroompage.dart';
 import 'package:chat_app/views/pages/chat/chatview.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +80,7 @@ class _HomepageState extends State<Homepage> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          Chatview(model: _search)));
+                                          Chatroompage(model: _search)));
                             },
                             title: Text(_search.username!),
                             subtitle: Text(_search.email!));
